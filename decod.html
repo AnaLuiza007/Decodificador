@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Codificador e Decodificador</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Marcellus&display=swap');
+
+        :root {
+            --cor--primeira--: #402B3A;
+            --cor--secunda--: #D63484;
+            --cor--terceira--: #FF9BD2;
+            --cor--quarta--: #F8F4EC;
+            --cor--quinta--: #000000;
+
+            --fonte--work--: 'Marcellus', sans-serif;
+        }
+
+        body {
+            background: var(--cor--primeira--);
+            margin: 0;
+            height: 100vh;
+            font-family: var(--fonte--work--);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .content {
+            background-color: var(--cor--secunda--);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--cor--quarta--);
+            text-align: center;
+            position: relative;
+        }
+
+        form {
+            margin-bottom: 20px;
+
+        }
+
+        input,
+        button {
+            margin: 5px;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: var(--cor--quarta--);
+            color: var(--cor--quinta--);
+    
+        }
+
+        button {
+            background: var(--cor--terceira--);
+            text-shadow: var(--cor--quarta--);
+            color: var(--cor--quinta--);
+            font-family: var(--fonte--work--);
+
+        }
+
+        button:hover {
+            background: var(--cor--quarta--);
+        }
+
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #copiar {
+            padding: 8px;
+            background: var(--cor--terceira--);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #copiar:hover {
+            background: var(--cor--quarta--);
+        }
+
+        .caixa {
+            background: var(--cor--primeira--);
+            margin-top: 20px;
+            border-radius: 50%;
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h1 {
+            color: var(--cor--quinta--);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <form id="form">
+            <h1> Decodificador e Codificador </h1>
+
+            <input type="text" id="input" placeholder="Insira o texto aqui">
+            <input type="radio" id="codificar" name="acao" value="codificar" checked>
+            <label for="codificar">Codificar</label>
+            <input type="radio" id="decodificar" name="acao" value="decodificar">
+            <label for="decodificar">Decodificar</label>
+            <button type="submit">Executar</button>
+        </form>
+
+        <p id="output"></p>
+        <button id="copiar">Copiar</button>
+    </div>
+
+    <script src="decod.js"></script>
+</body>
+
+</html>
